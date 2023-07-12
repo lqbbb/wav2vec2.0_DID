@@ -1,0 +1,7 @@
+# wav-to-duration --read-entire-file=true scp:data/test/split4utt/1/wav.scp ark,t:data/test/split4utt/1/utt2dur 
+# Started at Thu Oct 21 10:26:22 CST 2021
+#
+wav-to-duration --read-entire-file=true scp:data/test/split4utt/1/wav.scp ark,t:data/test/split4utt/1/utt2dur 
+LOG (wav-to-duration[5.5.983~1-7547a]:main():wav-to-duration.cc:92) Printed duration for 0 audio files.
+# Accounting: time=0 threads=1
+# Ended (code 1) at Thu Oct 21 10:26:22 CST 2021, elapsed time 0 seconds

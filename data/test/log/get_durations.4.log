@@ -1,0 +1,4 @@
+# wav-to-duration --read-entire-file=true scp:data/test/split4utt/4/wav.scp ark,t:data/test/split4utt/4/utt2dur 
+# Started at Thu Oct 21 10:26:22 CST 2021
+#
+wav-to-duration --read-entire-file=true scp:data/test/split4utt/4/wav.scp ark,t:data/test/split4utt/4/utt2dur 

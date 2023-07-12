@@ -1,0 +1,31 @@
+# wav-to-duration --read-entire-file=true scp:data/train/split4utt/4/wav.scp ark,t:data/train/split4utt/4/utt2dur 
+# Started at Thu Oct 21 10:21:39 CST 2021
+#
+wav-to-duration --read-entire-file=true scp:data/train/split4utt/4/wav.scp ark,t:data/train/split4utt/4/utt2dur 
+ERROR (wav-to-duration[5.5.983~1-7547a]:Read():wave-reader.cc:122) WaveData: expected RIFF or RIFX, got øÃ÷·
+
+[ Stack-Trace: ]
+wav-to-duration(kaldi::MessageLogger::LogMessage() const+0x82c) [0x4b2abc]
+wav-to-duration(kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&)+0x21) [0x432781]
+wav-to-duration(kaldi::WaveInfo::Read(std::istream&)+0x16b) [0x43fb3b]
+wav-to-duration(kaldi::WaveData::Read(std::istream&)+0x4e) [0x441a0e]
+wav-to-duration(kaldi::SequentialTableReaderScriptImpl<kaldi::WaveHolder>::EnsureObjectLoaded()+0x148) [0x43b43e]
+wav-to-duration(kaldi::SequentialTableReaderScriptImpl<kaldi::WaveHolder>::Value()+0x23) [0x43b6e3]
+wav-to-duration(main+0x1d4) [0x430fea]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf3) [0x7f1b660850b3]
+wav-to-duration(_start+0x2e) [0x430d3e]
+
+WARNING (wav-to-duration[5.5.983~1-7547a]:Read():feat/wave-reader.h:197) Exception caught in WaveHolder::Read(). kaldi::KaldiFatalError
+WARNING (wav-to-duration[5.5.983~1-7547a]:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from /home/lqb/OLR2021_train/OLR2019/test/task_2/audio/100323.wav
+ERROR (wav-to-duration[5.5.983~1-7547a]:Value():util/kaldi-table-inl.h:164) Failed to load object from /home/lqb/OLR2021_train/OLR2019/test/task_2/audio/100323.wav (to suppress this error, add the permissive (p, ) option to the rspecifier.
+
+[ Stack-Trace: ]
+wav-to-duration(kaldi::MessageLogger::LogMessage() const+0x82c) [0x4b2abc]
+wav-to-duration(kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&)+0x21) [0x432781]
+wav-to-duration(kaldi::SequentialTableReaderScriptImpl<kaldi::WaveHolder>::Value()+0xb5) [0x43b775]
+wav-to-duration(main+0x1d4) [0x430fea]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf3) [0x7f1b660850b3]
+wav-to-duration(_start+0x2e) [0x430d3e]
+
+kaldi::KaldiFatalError# Accounting: time=99 threads=1
+# Ended (code 255) at Thu Oct 21 10:23:18 CST 2021, elapsed time 99 seconds
